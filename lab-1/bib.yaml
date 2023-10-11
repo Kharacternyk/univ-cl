@@ -1,0 +1,11 @@
+openai:
+  type: Web
+  url: https://platform.openai.com/
+
+openai-pip:
+  type: Web
+  url: https://pypi.org/project/openai/
+
+tiktoken:
+  type: Web
+  url: https://pypi.org/project/tiktoken/
