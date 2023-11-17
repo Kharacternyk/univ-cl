@@ -1,10 +1,10 @@
 from csv import writer
 from random import sample
 
+from pandas import read_csv
 from tqdm import tqdm
 
 from bert import bert_compare, get_vectors
-from pandas import read_csv
 from wordnet import get_synsets, lin_compare, resnik_compare, wu_palmer_compare
 
 
@@ -13,7 +13,7 @@ def format(value):
 
 
 frame = read_csv("bbc_news.csv")
-descriptions = frame.sample(100)["description"]
+descriptions = frame.sample(50)["description"]
 
 with open("result.csv", "a", newline="") as result_file:
     result_writer = writer(result_file)
